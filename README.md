@@ -1,2 +1,9 @@
-# vivado-boards-bh
-Xilinx Vivado Board files for Designed FPGA Board by Binary Hardware and some aliexpress.com FPGA Boards
+# Board Files
+
+> **Xilinx Vivado / ISE Board Files that Supported by NeuralChip**
+
+## Vivado Boards
+
+### K7HPC
+
+Kintex 7 HPC Board
