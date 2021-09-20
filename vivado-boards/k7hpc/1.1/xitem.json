@@ -3,7 +3,7 @@
     "items": [
       {
         "infra": {
-          "name": "k7hpc",
+          "name": "K7HPC",
           "display": "Kintex-7 K7HPC Platform",
           "revision": "1.1",
           "description": "Kintex-7 K7HPC Platform",
