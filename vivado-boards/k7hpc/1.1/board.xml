@@ -48,7 +48,7 @@
   
 <components>
 
-    <component name="part0" display_name="Kintex-7 k7hpc Evaluation Platform" type="fpga" part_name="xc7k325tffg900-2" pin_map_file="part0_pins.xml" vendor="neuralchip" spec_url="neuralchip.tech/k7hpc">
+    <component name="part0" display_name="Kintex-7 k7hpc Evaluation Platform" type="fpga" part_name="xc7k325tffg676-2" pin_map_file="part0_pins.xml" vendor="neuralchip" spec_url="neuralchip.tech/k7hpc">
       <description>FPGA part on the board</description>
       <interfaces>
         <interface mode="master" name="ddr3_sdram" type="xilinx.com:interface:ddrx_rtl:1.0" of_component="ddr3_sdram" preset_proc="ddr3_sdram_preset">
