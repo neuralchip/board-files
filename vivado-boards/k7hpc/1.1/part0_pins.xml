@@ -95,8 +95,8 @@
 		<pin index="93" name ="USB_CTS" iostandard="LVDS" loc="L27"/>
 		<!-- NOTE for pin index 94 & 95 iostandard is defined in component rs232_uart 
 		iostandard is optional attribute for fpga pins & it will be always overwritten by component(non fpga) level pin attributes -->
-		<pin index="94" name ="USB_TX" loc="K24"/>
-		<pin index="95" name ="USB_RX" loc="M19"/>
+		<pin index="94" name ="USB_TX" loc="M25"/>
+		<pin index="95" name ="USB_RX" loc="L25"/>
 		<pin index="96" name ="USB_RTS" iostandard="LVCMOS25" loc="K23"/>
 
 		<pin index="97" name ="SFP_TX_DISABLE" iostandard="LVDS" loc="Y20"/>
@@ -135,8 +135,8 @@
 		<pin index="127" name ="ROTARY_INCB" iostandard="LVCMOS25" loc="Y25"/>
 		<pin index="128" name ="SGMIICLK_Q0_P" iostandard="LVDS" loc="G8"/>
 		<pin index="129" name ="SGMIICLK_Q0_N" iostandard="LVDS" loc="G7"/>
-		<pin index="130" name ="SYSCLK_P" iostandard="DIFF_SSTL15" loc="AD12"/>
-		<pin index="131" name ="SYSCLK_N" iostandard="DIFF_SSTL15" loc="AD11" diff_term="true"/>
+		<pin index="130" name ="SYSCLK_P" iostandard="DIFF_SSTL15" loc="AB11"/>
+		<pin index="131" name ="SYSCLK_N" iostandard="DIFF_SSTL15" loc="AC11" diff_term="true"/>
 		<pin index="132" name ="CPU_RESET" iostandard="LVCMOS15" loc="AB7"/>
 		
 		<pin index="133" name="FMC_LPC_LA09_P" iostandard="LVCMOS25" loc="AK23"/>
