@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<board schema_version="2.1" vendor="neuralchip.tech" name="k7hpc" display_name="Kintex-7 K7HPC Development Board" url="neuralchip.tech/k7hpc" preset_file="preset.xml">
+
+<board schema_version="2.1" vendor="neuralchip.tech" name="k7hpc" display_name="Kintex-7 HPC-PCIe Computing Platform" url="www.neuralchip.tech/k7hpc" preset_file="preset.xml">
 
 	<images>
 		<image name="k7hpc_board.png" display_name="k7hpc BOARD" sub_type="board">
-			<description>K7HPC Board File Image</description>
+			<description>k7hpc Board File Image</description>
 		</image>
 	</images>
 
@@ -11,11 +12,9 @@
 		<revision id="0">1.0</revision>
 	</compatible_board_revisions>
 
-	<file_version>1.1</file_version>
+	<file_version>1.0</file_version>
 
-	<description>Kintex-7 K7HPC development board is PCIe Card with XC7K325T chip,
-								 DDR3 sodimm, SD Card, Sata, RJ45, SFP+, and so on.
-	</description>
+	<description>Kintex-7 HPC-PCIe Computing Platform</description>
 
 	<parameters>
 		<parameter name="heat_sink_type" value="medium" value_type="string"/>
@@ -23,14 +22,266 @@
 	</parameters>
 
 	<jumpers>
-		<jumper name="J2_V25_V33" default_value="true">
-			<description>value=true will configure pins voltage to 3.3 Volts.</description>
+		<jumper name="SW13_M0" default_value="false">
+			<description>Impacts connection between flash_qspi and flash_bpi.If value=true, flash_qspi will be enabled</description>
+		</jumper>
+		<jumper name="SW13_M1" default_value="true">
+			<description>Impacts connection between flash_qspi and flash_bpi.If value=true, flash_bpi will be enabled</description>
+		</jumper>
+		<jumper name="J29_P1_P2" default_value="true">
+			<description>value=true will configure component phy to work in MII or GMII mode or RGMII mode based on J30 and J64</description>
+		</jumper>
+		<jumper name="J29_P2_P3" default_value="false">
+			<description>value=true will configure component phy to work in SGMII mode.</description>
+		</jumper>
+		<jumper name="J30_P1_P2" default_value="true">
+			<description>value=true will configure component phy to work in MII or GMII mode.</description>
+		</jumper>
+		<jumper name="J30_P2_P3" default_value="false">
+			<description>value=true will configure component phy to work in SGMII mode.</description>
+		</jumper>
+		<jumper name="J64" default_value="false">
+			<description>value=true will configure component phy either to work RGMII mode.</description>
+		</jumper>
+		<jumper name="J4" default_value="true"> 
+				switch beetween 2.5v or 3.3v drive for IOs, value=true will configure voltage of boards to 3.3 volt.
 		</jumper>
 	</jumpers>
 
-<components>
+	<components>
 
-		<component name="part0" display_name="Kintex-7 k7hpc Evaluation Platform" type="fpga" part_name="xc7k325tffg676-2" pin_map_file="part0_pins.xml" vendor="neuralchip" spec_url="neuralchip.tech/k7hpc">
+	<component name="fmc_lpc_connector" display_name="FMC_LPC" type="connector" sub_type="fmc_lpc">
+	<pins>
+		<pin index="82" name="fmc_lpc_dp0_c2m_p"></pin> <!-- C2 -->
+		<pin index="83" name="fmc_lpc_dp0_c2m_n"></pin> <!-- C3 -->
+		<pin index="86" name="fmc_lpc_dp0_m2c_p"></pin> <!-- C6 -->
+		<pin index="87" name="fmc_lpc_dp0_m2c_n"></pin> <!-- C7 -->
+		<pin index="90" name="fmc_lpc_la06_p"></pin> <!-- C10 -->
+		<pin index="91" name="fmc_lpc_la06_n"></pin> <!-- C11 -->
+		<pin index="94" name="fmc_lpc_la10_p"></pin> <!-- C14 -->
+		<pin index="95" name="fmc_lpc_la10_n"></pin> <!-- C15 -->
+		<pin index="98" name="fmc_lpc_la14_p"></pin> <!-- C18 -->
+		<pin index="99" name="fmc_lpc_la14_n"></pin> <!-- C19 -->
+		<pin index="102" name="fmc_lpc_la18_p"></pin> <!-- C22 -->
+		<pin index="103" name="fmc_lpc_la18_n"></pin> <!-- C23 -->
+		<pin index="106" name="fmc_lpc_la27_p"></pin> <!-- C26 -->
+		<pin index="107" name="fmc_lpc_la27_n"></pin> <!-- C27 -->
+		<pin index="124" name="fmc_lpc_gbtclk0_m2c_p"></pin> <!-- D4 -->
+		<pin index="125" name="fmc_lpc_gbtclk0_m2c_n"></pin> <!-- D5 -->
+		<pin index="128" name="fmc_lpc_la01_p"></pin> <!-- D8 -->
+		<pin index="129" name="fmc_lpc_la01_n"></pin> <!-- D9 -->
+		<pin index="131" name="fmc_lpc_la05_p"></pin> <!-- D11 -->
+		<pin index="132" name="fmc_lpc_la05_n"></pin> <!-- D12 -->
+		<pin index="134" name="fmc_lpc_la09_p"></pin> <!-- D14 -->
+		<pin index="135" name="fmc_lpc_la09_n"></pin> <!-- D15 -->
+		<pin index="137" name="fmc_lpc_la13_p"></pin> <!-- D17 -->
+		<pin index="138" name="fmc_lpc_la13_n"></pin> <!-- D18 -->
+		<pin index="140" name="fmc_lpc_la17_p"></pin> <!-- D20 -->
+		<pin index="141" name="fmc_lpc_la17_n"></pin> <!-- D21 -->
+		<pin index="143" name="fmc_lpc_la23_p"></pin> <!-- D23 -->
+		<pin index="144" name="fmc_lpc_la23_n"></pin> <!-- D24 -->
+		<pin index="146" name="fmc_lpc_la26_p"></pin> <!-- D26 -->
+		<pin index="147" name="fmc_lpc_la26_n"></pin> <!-- D27 -->
+		<pin index="242" name="fmc_lpc_clk1_m2c_p"></pin> <!-- G2 -->
+		<pin index="243" name="fmc_lpc_clk1_m2c_n"></pin> <!-- G3 -->
+		<pin index="246" name="fmc_lpc_la00_p"></pin> <!-- G6 -->
+		<pin index="247" name="fmc_lpc_la00_n"></pin> <!-- G7 -->
+		<pin index="249" name="fmc_lpc_la03_p"></pin> <!-- G9 -->
+		<pin index="250" name="fmc_lpc_la03_n"></pin> <!-- G10 -->
+		<pin index="252" name="fmc_lpc_la08_p"></pin> <!-- G12 -->
+		<pin index="253" name="fmc_lpc_la08_n"></pin> <!-- G13 -->
+		<pin index="255" name="fmc_lpc_la12_p"></pin> <!-- G15 -->
+		<pin index="256" name="fmc_lpc_la12_n"></pin> <!-- G16 -->
+		<pin index="258" name="fmc_lpc_la16_p"></pin> <!-- G18 -->
+		<pin index="259" name="fmc_lpc_la16_n"></pin> <!-- G19 -->
+		<pin index="261" name="fmc_lpc_la20_p"></pin> <!-- G21 -->
+		<pin index="262" name="fmc_lpc_la20_n"></pin> <!-- G22 -->
+		<pin index="264" name="fmc_lpc_la22_p"></pin> <!-- G24 -->
+		<pin index="265" name="fmc_lpc_la22_n"></pin> <!-- G25 -->
+		<pin index="267" name="fmc_lpc_la25_p"></pin> <!-- G27 -->
+		<pin index="268" name="fmc_lpc_la25_n"></pin> <!-- G28 -->
+		<pin index="270" name="fmc_lpc_la29_p"></pin> <!-- G30 -->
+		<pin index="271" name="fmc_lpc_la29_n"></pin> <!-- G31 -->
+		<pin index="273" name="fmc_lpc_la31_p"></pin> <!-- G33 -->
+		<pin index="274" name="fmc_lpc_la31_n"></pin> <!-- G34 -->
+		<pin index="276" name="fmc_lpc_la33_p"></pin> <!-- G36 -->
+		<pin index="277" name="fmc_lpc_la33_n"></pin> <!-- G37 -->
+		<pin index="282" name="fmc_lpc_prsnt_m2c_b_ls"></pin> <!-- prsnt_m2c_l -->
+		<pin index="284" name="fmc_lpc_clk0_m2c_p"></pin> <!-- H4 -->
+		<pin index="285" name="fmc_lpc_clk0_m2c_n"></pin> <!-- H5 -->
+		<pin index="287" name="fmc_lpc_la02_p"></pin> <!-- H7 -->
+		<pin index="288" name="fmc_lpc_la02_n"></pin> <!-- H8 -->
+		<pin index="290" name="fmc_lpc_la04_p"></pin> <!-- H10 -->
+		<pin index="291" name="fmc_lpc_la04_n"></pin> <!-- H11 -->
+		<pin index="293" name="fmc_lpc_la07_p"></pin> <!-- H13 -->
+		<pin index="294" name="fmc_lpc_la07_n"></pin> <!-- H14 -->
+		<pin index="296" name="fmc_lpc_la11_p"></pin> <!-- H16 -->
+		<pin index="297" name="fmc_lpc_la11_n"></pin> <!-- H17 -->
+		<pin index="299" name="fmc_lpc_la15_p"></pin> <!-- H19 -->
+		<pin index="300" name="fmc_lpc_la15_n"></pin> <!-- H20 -->
+		<pin index="302" name="fmc_lpc_la19_p"></pin> <!-- H22 -->
+		<pin index="303" name="fmc_lpc_la19_n"></pin> <!-- H23 -->
+		<pin index="305" name="fmc_lpc_la21_p"></pin> <!-- H25 -->
+		<pin index="306" name="fmc_lpc_la21_n"></pin> <!-- H26 -->
+		<pin index="308" name="fmc_lpc_la24_p"></pin> <!-- H28 -->
+		<pin index="309" name="fmc_lpc_la24_n"></pin> <!-- H29 -->
+		<pin index="311" name="fmc_lpc_la28_p"></pin> <!-- H31 -->
+		<pin index="312" name="fmc_lpc_la28_n"></pin> <!-- H32 -->
+		<pin index="314" name="fmc_lpc_la30_p"></pin> <!-- H34 -->
+		<pin index="315" name="fmc_lpc_la30_n"></pin> <!-- H35 -->
+		<pin index="317" name="fmc_lpc_la32_p"></pin> <!-- H37 -->
+		<pin index="318" name="fmc_lpc_la32_n"></pin> <!-- H38 -->
+	</pins>
+	</component>
+
+	<component name="fmc_hpc_connector" display_name="FMC_HPC" type="connector" sub_type="fmc_hpc">
+	<pins>
+		<pin index="2" name="fmc_hpc_dp1_m2c_p"></pin> <!-- A2 -->
+		<pin index="3" name="fmc_hpc_dp1_m2c_n"></pin> <!-- A3 -->
+		<pin index="6" name="fmc_hpc_dp2_m2c_p"></pin> <!-- A6 -->
+		<pin index="7" name="fmc_hpc_dp2_m2c_n"></pin> <!-- A7 -->
+		<pin index="10" name="fmc_hpc_dp3_m2c_p"></pin> <!-- A10 -->
+		<pin index="11" name="fmc_hpc_dp3_m2c_n"></pin> <!-- A11 -->
+		<pin index="22" name="fmc_hpc_dp1_c2m_p"></pin> <!-- A22 -->
+		<pin index="23" name="fmc_hpc_dp1_c2m_n"></pin> <!-- A23 -->
+		<pin index="26" name="fmc_hpc_dp2_c2m_p"></pin> <!-- A26 -->
+		<pin index="27" name="fmc_hpc_dp2_c2m_n"></pin> <!-- A27 -->
+		<pin index="30" name="fmc_hpc_dp3_c2m_p"></pin> <!-- A30 -->
+		<pin index="31" name="fmc_hpc_dp3_c2m_n"></pin> <!-- A31 -->
+		<pin index="60" name="fmc_hpc_gbtclk1_m2c_p"></pin> <!-- B20 -->
+		<pin index="61" name="fmc_hpc_gbtclk1_m2c_n"></pin> <!-- B21 -->
+		<pin index="82" name="fmc_hpc_dp0_c2m_p"></pin> <!-- C2 -->
+		<pin index="83" name="fmc_hpc_dp0_c2m_n"></pin> <!-- C3 -->
+		<pin index="86" name="fmc_hpc_dp0_m2c_p"></pin> <!-- C6 -->
+		<pin index="87" name="fmc_hpc_dp0_m2c_n"></pin> <!-- C7 -->
+		<pin index="90" name="fmc_hpc_la06_p"></pin> <!-- C10 -->
+		<pin index="91" name="fmc_hpc_la06_n"></pin> <!-- C11 -->
+		<pin index="94" name="fmc_hpc_la10_p"></pin> <!-- C14 -->
+		<pin index="95" name="fmc_hpc_la10_n"></pin> <!-- C15 -->
+		<pin index="98" name="fmc_hpc_la14_p"></pin> <!-- C18 -->
+		<pin index="99" name="fmc_hpc_la14_n"></pin> <!-- C19 -->
+		<pin index="102" name="fmc_hpc_la18_p"></pin> <!-- C22 -->
+		<pin index="103" name="fmc_hpc_la18_n"></pin> <!-- C23 -->
+		<pin index="106" name="fmc_hpc_la27_p"></pin> <!-- C26 -->
+		<pin index="107" name="fmc_hpc_la27_n"></pin> <!-- C27 -->
+		<pin index="124" name="fmc_hpc_gbtclk0_m2c_p"></pin> <!-- D4 -->
+		<pin index="125" name="fmc_hpc_gbtclk0_m2c_n"></pin> <!-- D5 -->
+		<pin index="128" name="fmc_hpc_la01_p"></pin> <!-- D8 -->
+		<pin index="129" name="fmc_hpc_la01_n"></pin> <!-- D9 -->
+		<pin index="131" name="fmc_hpc_la05_p"></pin> <!-- D11 -->
+		<pin index="132" name="fmc_hpc_la05_n"></pin> <!-- D12 -->
+		<pin index="134" name="fmc_hpc_la09_p"></pin> <!-- D14 -->
+		<pin index="135" name="fmc_hpc_la09_n"></pin> <!-- D15 -->
+		<pin index="137" name="fmc_hpc_la13_p"></pin> <!-- D17 -->
+		<pin index="138" name="fmc_hpc_la13_n"></pin> <!-- D18 -->
+		<pin index="140" name="fmc_hpc_la17_p"></pin> <!-- D20 -->
+		<pin index="141" name="fmc_hpc_la17_n"></pin> <!-- D21 -->
+		<pin index="143" name="fmc_hpc_la23_p"></pin> <!-- D23 -->
+		<pin index="144" name="fmc_hpc_la23_n"></pin> <!-- D24 -->
+		<pin index="146" name="fmc_hpc_la26_p"></pin> <!-- D26 -->
+		<pin index="147" name="fmc_hpc_la26_n"></pin> <!-- D27 -->
+		<pin index="162" name="fmc_hpc_ha01_p"></pin> <!-- E2 -->
+		<pin index="163" name="fmc_hpc_ha01_n"></pin> <!-- E3 -->
+		<pin index="166" name="fmc_hpc_ha05_p"></pin> <!-- E6 -->
+		<pin index="167" name="fmc_hpc_ha05_n"></pin> <!-- E7 -->
+		<pin index="169" name="fmc_hpc_ha09_p"></pin> <!-- E9 -->
+		<pin index="170" name="fmc_hpc_ha09_n"></pin> <!-- E10 -->
+		<pin index="172" name="fmc_hpc_ha13_p"></pin> <!-- E12 -->
+		<pin index="173" name="fmc_hpc_ha13_n"></pin> <!-- E13 -->
+		<pin index="175" name="fmc_hpc_ha16_p"></pin> <!-- E15 -->
+		<pin index="176" name="fmc_hpc_ha16_n"></pin> <!-- E16 -->
+		<pin index="178" name="fmc_hpc_ha20_p"></pin> <!-- E18 -->
+		<pin index="179" name="fmc_hpc_ha20_n"></pin> <!-- E19 -->
+		<pin index="201" name="fmc_hpc_pg_m2c_ls"></pin> <!-- pg_m2c -->
+		<pin index="204" name="fmc_hpc_ha00_p"></pin> <!-- F4 -->
+		<pin index="205" name="fmc_hpc_ha00_n"></pin> <!-- F5 -->
+		<pin index="207" name="fmc_hpc_ha04_p"></pin> <!-- F7 -->
+		<pin index="208" name="fmc_hpc_ha04_n"></pin> <!-- F8 -->
+		<pin index="210" name="fmc_hpc_ha08_p"></pin> <!-- F10 -->
+		<pin index="211" name="fmc_hpc_ha08_n"></pin> <!-- F11 -->
+		<pin index="213" name="fmc_hpc_ha12_p"></pin> <!-- F13 -->
+		<pin index="214" name="fmc_hpc_ha12_n"></pin> <!-- F14 -->
+		<pin index="216" name="fmc_hpc_ha15_p"></pin> <!-- F16 -->
+		<pin index="217" name="fmc_hpc_ha15_n"></pin> <!-- F17 -->
+		<pin index="219" name="fmc_hpc_ha19_p"></pin> <!-- F19 -->
+		<pin index="220" name="fmc_hpc_ha19_n"></pin> <!-- F20 -->
+		<pin index="242" name="fmc_hpc_clk1_m2c_p"></pin> <!-- G2 -->
+		<pin index="243" name="fmc_hpc_clk1_m2c_n"></pin> <!-- G3 -->
+		<pin index="246" name="fmc_hpc_la00_p"></pin> <!-- G6 -->
+		<pin index="247" name="fmc_hpc_la00_n"></pin> <!-- G7 -->
+		<pin index="249" name="fmc_hpc_la03_p"></pin> <!-- G9 -->
+		<pin index="250" name="fmc_hpc_la03_n"></pin> <!-- G10 -->
+		<pin index="252" name="fmc_hpc_la08_p"></pin> <!-- G12 -->
+		<pin index="253" name="fmc_hpc_la08_n"></pin> <!-- G13 -->
+		<pin index="255" name="fmc_hpc_la12_p"></pin> <!-- G15 -->
+		<pin index="256" name="fmc_hpc_la12_n"></pin> <!-- G16 -->
+		<pin index="258" name="fmc_hpc_la16_p"></pin> <!-- G18 -->
+		<pin index="259" name="fmc_hpc_la16_n"></pin> <!-- G19 -->
+		<pin index="261" name="fmc_hpc_la20_p"></pin> <!-- G21 -->
+		<pin index="262" name="fmc_hpc_la20_n"></pin> <!-- G22 -->
+		<pin index="264" name="fmc_hpc_la22_p"></pin> <!-- G24 -->
+		<pin index="265" name="fmc_hpc_la22_n"></pin> <!-- G25 -->
+		<pin index="267" name="fmc_hpc_la25_p"></pin> <!-- G27 -->
+		<pin index="268" name="fmc_hpc_la25_n"></pin> <!-- G28 -->
+		<pin index="270" name="fmc_hpc_la29_p"></pin> <!-- G30 -->
+		<pin index="271" name="fmc_hpc_la29_n"></pin> <!-- G31 -->
+		<pin index="273" name="fmc_hpc_la31_p"></pin> <!-- G33 -->
+		<pin index="274" name="fmc_hpc_la31_n"></pin> <!-- G34 -->
+		<pin index="276" name="fmc_hpc_la33_p"></pin> <!-- G36 -->
+		<pin index="277" name="fmc_hpc_la33_n"></pin> <!-- G37 -->
+		<pin index="282" name="fmc_hpc_prsnt_m2c_b_ls"></pin> <!-- prsnt_m2c_l -->
+		<pin index="284" name="fmc_hpc_clk0_m2c_p"></pin> <!-- H4 -->
+		<pin index="285" name="fmc_hpc_clk0_m2c_n"></pin> <!-- H5 -->
+		<pin index="287" name="fmc_hpc_la02_p"></pin> <!-- H7 -->
+		<pin index="288" name="fmc_hpc_la02_n"></pin> <!-- H8 -->
+		<pin index="290" name="fmc_hpc_la04_p"></pin> <!-- H10 -->
+		<pin index="291" name="fmc_hpc_la04_n"></pin> <!-- H11 -->
+		<pin index="293" name="fmc_hpc_la07_p"></pin> <!-- H13 -->
+		<pin index="294" name="fmc_hpc_la07_n"></pin> <!-- H14 -->
+		<pin index="296" name="fmc_hpc_la11_p"></pin> <!-- H16 -->
+		<pin index="297" name="fmc_hpc_la11_n"></pin> <!-- H17 -->
+		<pin index="299" name="fmc_hpc_la15_p"></pin> <!-- H19 -->
+		<pin index="300" name="fmc_hpc_la15_n"></pin> <!-- H20 -->
+		<pin index="302" name="fmc_hpc_la19_p"></pin> <!-- H22 -->
+		<pin index="303" name="fmc_hpc_la19_n"></pin> <!-- H23 -->
+		<pin index="305" name="fmc_hpc_la21_p"></pin> <!-- H25 -->
+		<pin index="306" name="fmc_hpc_la21_n"></pin> <!-- H26 -->
+		<pin index="308" name="fmc_hpc_la24_p"></pin> <!-- H28 -->
+		<pin index="309" name="fmc_hpc_la24_n"></pin> <!-- H29 -->
+		<pin index="311" name="fmc_hpc_la28_p"></pin> <!-- H31 -->
+		<pin index="312" name="fmc_hpc_la28_n"></pin> <!-- H32 -->
+		<pin index="314" name="fmc_hpc_la30_p"></pin> <!-- H34 -->
+		<pin index="315" name="fmc_hpc_la30_n"></pin> <!-- H35 -->
+		<pin index="317" name="fmc_hpc_la32_p"></pin> <!-- H37 -->
+		<pin index="318" name="fmc_hpc_la32_n"></pin> <!-- H38 -->
+		<pin index="326" name="fmc_hpc_ha03_p"></pin> <!-- J6 -->
+		<pin index="327" name="fmc_hpc_ha03_n"></pin> <!-- J7 -->
+		<pin index="329" name="fmc_hpc_ha07_p"></pin> <!-- J9 -->
+		<pin index="330" name="fmc_hpc_ha07_n"></pin> <!-- J10 -->
+		<pin index="332" name="fmc_hpc_ha11_p"></pin> <!-- J12 -->
+		<pin index="333" name="fmc_hpc_ha11_n"></pin> <!-- J13 -->
+		<pin index="335" name="fmc_hpc_ha14_p"></pin> <!-- J15 -->
+		<pin index="336" name="fmc_hpc_ha14_n"></pin> <!-- J16 -->
+		<pin index="338" name="fmc_hpc_ha18_p"></pin> <!-- J18 -->
+		<pin index="339" name="fmc_hpc_ha18_n"></pin> <!-- J19 -->
+		<pin index="341" name="fmc_hpc_ha22_p"></pin> <!-- J21 -->
+		<pin index="342" name="fmc_hpc_ha22_n"></pin> <!-- J22 -->
+		<pin index="367" name="fmc_hpc_ha02_p"></pin> <!-- K7 -->
+		<pin index="368" name="fmc_hpc_ha02_n"></pin> <!-- K8 -->
+		<pin index="370" name="fmc_hpc_ha06_p"></pin> <!-- K10 -->
+		<pin index="371" name="fmc_hpc_ha06_n"></pin> <!-- K11 -->
+		<pin index="373" name="fmc_hpc_ha10_p"></pin> <!-- K13 -->
+		<pin index="374" name="fmc_hpc_ha10_n"></pin> <!-- K14 -->
+		<pin index="376" name="fmc_hpc_ha17_p"></pin> <!-- K16 -->
+		<pin index="377" name="fmc_hpc_ha17_n"></pin> <!-- K17 -->
+		<pin index="379" name="fmc_hpc_ha21_p"></pin> <!-- K19 -->
+		<pin index="380" name="fmc_hpc_ha21_n"></pin> <!-- K20 -->
+		<pin index="382" name="fmc_hpc_ha23_p"></pin> <!-- K22 -->
+		<pin index="383" name="fmc_hpc_ha23_n"></pin> <!-- K23 -->
+	</pins>
+	</component>
+
+	<component name="part0" display_name="Kintex-7 HPC-PCie Computing Platform" type="fpga" part_name="xc7k325tffg676-2" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="www.neuralchip.tech/k7hpc">
 			<description>FPGA part on the board</description>
 			<interfaces>
 				<interface mode="master" name="ddr3_sdram" type="xilinx.com:interface:ddrx_rtl:1.0" of_component="ddr3_sdram" preset_proc="ddr3_sdram_preset">
@@ -115,7 +366,7 @@
 							</pin_maps>
 						</port_map>
 					</port_maps>
-					<!-- <enablement_dependencies>
+					<enablement_dependencies>
 						<jumpers>
 							<jumper name="J29_P1_P2">true</jumper>
 							<jumper name="J29_P2_P3">false</jumper>
@@ -123,7 +374,7 @@
 							<jumper name="J30_P2_P3">false</jumper>
 							<jumper name="J64">false</jumper>
 						</jumpers>
-					</enablement_dependencies> -->
+					</enablement_dependencies>
 				</interface>
 				<interface mode="master" name="mii" type="xilinx.com:interface:mii_rtl:1.0" of_component="phy_onboard" preset_proc="mii_preset">
 					<description>Primary interface to communicate with ethernet phy in MII mode. </description>
@@ -193,7 +444,7 @@
 							</pin_maps>
 						</port_map>
 					</port_maps>
-					<!-- <enablement_dependencies>
+					<enablement_dependencies>
 						<jumpers>
 							<jumper name="J29_P1_P2">true</jumper>
 							<jumper name="J29_P2_P3">false</jumper>
@@ -201,7 +452,7 @@
 							<jumper name="J30_P2_P3">false</jumper>
 							<jumper name="J64">false</jumper>
 						</jumpers>
-					</enablement_dependencies> -->
+					</enablement_dependencies>
 				</interface>
 				<interface mode="master" name="rgmii" type="xilinx.com:interface:rgmii_rtl:1.0" of_component="phy_onboard" preset_proc="rgmii_preset">
 					<description>Primary interface to communicate with ethernet phy in RGMII mode. </description>
@@ -246,7 +497,7 @@
 							</pin_maps>
 						</port_map>
 					</port_maps>
-					<!-- <enablement_dependencies>
+					<enablement_dependencies>
 						<jumpers>
 							<jumper name="J29_P1_P2">true</jumper>
 							<jumper name="J29_P2_P3">false</jumper>
@@ -254,7 +505,7 @@
 							<jumper name="J30_P2_P3">false</jumper>
 							<jumper name="J64">true</jumper>
 						</jumpers>
-					</enablement_dependencies> -->
+					</enablement_dependencies>
 				</interface>
 				<interface mode="master" name="sgmii" type="xilinx.com:interface:sgmii_rtl:1.0" of_component="phy_onboard" preset_proc="sgmii_preset">
 					<parameters>
@@ -286,7 +537,7 @@
 							</pin_maps>
 						</port_map>
 					</port_maps>
-					<!-- <enablement_dependencies>
+					<enablement_dependencies>
 						<jumpers>
 							<jumper name="J29_P1_P2">false</jumper>
 							<jumper name="J29_P2_P3">true</jumper>
@@ -294,7 +545,7 @@
 							<jumper name="J30_P2_P3">true</jumper>
 							<jumper name="J64">false</jumper>
 						</jumpers>
-					</enablement_dependencies> -->
+					</enablement_dependencies>
 				</interface>
 				<interface mode="master" name="mdio_io" type="xilinx.com:interface:mdio_io:1.0" of_component="phy_onboard">
 					<description>Secondary interface to communicate with ethernet phy when mode is selected as MII,GMII,1000BaseX. </description>
@@ -601,12 +852,12 @@
 							</pin_maps>
 						</port_map>
 					</port_maps>
-					<!-- <enablement_dependencies>
+					<enablement_dependencies>
 						<jumpers>
 							<jumper name="SW13_M0">false</jumper>
 							<jumper name="SW13_M1">true</jumper>
 						</jumpers>
-					</enablement_dependencies> -->
+					</enablement_dependencies>
 				</interface>
 				<interface mode="master" name="spi_flash" type="xilinx.com:interface:spi_rtl:1.0" of_component="spi_flash">
 					<preferred_ips>
@@ -689,12 +940,12 @@
 							</pin_maps>
 						</port_map>
 					</port_maps>
-					<!-- <enablement_dependencies>
+					<enablement_dependencies>
 						<jumpers>
 							<jumper name="SW13_M0">true</jumper>
 							<jumper name="SW13_M1">false</jumper>
 						</jumpers>
-					</enablement_dependencies> -->
+					</enablement_dependencies>
 				</interface>
 				<interface mode="master" name="led_8bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="led_8bits" preset_proc="led_8bits_preset">
 					<preferred_ips>
@@ -922,15 +1173,18 @@
 						</port_map>
 					</port_maps>
 				</interface>
-				<interface mode="master" name="push_buttons_2bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="push_buttons_2bits" preset_proc="push_buttons_2bits_preset">
+				<interface mode="master" name="push_buttons_5bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="push_buttons_5bits" preset_proc="push_buttons_5bits_preset">
 					<preferred_ips>
 						<preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
 					</preferred_ips>
 					<port_maps>
-						<port_map logical_port="TRI_I" physical_port="push_buttons_2bits_tri" dir="in" left="2" right="0">
+						<port_map logical_port="TRI_I" physical_port="push_buttons_5bits_tri" dir="in" left="4" right="0">
 							<pin_maps>
-								<pin_map port_index="0" component_pin="GPIO_KEY_2"/>
-								<pin_map port_index="1" component_pin="GPIO_KEY_3"/>
+								<pin_map port_index="0" component_pin="GPIO_SW_C"/>
+								<pin_map port_index="1" component_pin="GPIO_SW_W"/>
+								<pin_map port_index="2" component_pin="GPIO_SW_S"/>
+								<pin_map port_index="3" component_pin="GPIO_SW_E"/>
+								<pin_map port_index="4" component_pin="GPIO_SW_N"/>
 							</pin_maps>
 						</port_map>
 					</port_maps>
@@ -1365,10 +1619,10 @@
 		<component name="reset" display_name="FPGA Reset" type="chip" sub_type="system_reset" major_group="Reset" part_name="TL3301EP100QG" vendor="ESwitch">
 			<description>CPU Reset Push Button, Active High</description>
 		</component>
-		<component name="push_buttons_2bits" display_name="Push buttons" type="chip" sub_type="push_button" major_group="General Purpose Input or Output" part_name="TL3301EP100QG" vendor="ESwitch">
+		<component name="push_buttons_5bits" display_name="Push buttons" type="chip" sub_type="push_button" major_group="General Purpose Input or Output" part_name="TL3301EP100QG" vendor="ESwitch">
 			<description>Push Buttons, C W E S N, Active High</description>
 		</component>
-		<component name="pcie_refclk" display_name="PCIe MGT reference Clock" type="chip" sub_type="mgt_clock" major_group="Clock Sources" part_name="pcie_8lane_edge" vendor="Clock" spec_url="">
+<component name="pcie_refclk" display_name="PCIe MGT reference Clock" type="chip" sub_type="mgt_clock" major_group="Clock Sources" part_name="pcie_8lane_edge" vendor="Clock" spec_url="">
 			<description>Clock input from PCI Express edge connector</description>
 			<parameters>
 				<parameter name="frequency" value="100000000"/>
@@ -1420,7 +1674,7 @@
 				</component_mode>
 			</component_modes>
 		</component>
-</components>
+	</components>
 	<jtag_chains>
 		<jtag_chain name="chain1">
 			<position name="0" component="part0"/>
@@ -1698,8 +1952,8 @@
 				</enablement_dependencies>
 			</connection_map>
 		</connection>
-		<connection name="part0_push_buttons_2bits" component1="part0" component2="push_buttons_2bits">
-			<connection_map name="part0_push_buttons_2bits_1" typical_delay="5" c1_st_index="88" c1_end_index="92" c2_st_index="0" c2_end_index="4"/>
+		<connection name="part0_push_buttons_5bits" component1="part0" component2="push_buttons_5bits">
+			<connection_map name="part0_push_buttons_5bits_1" typical_delay="5" c1_st_index="88" c1_end_index="92" c2_st_index="0" c2_end_index="4"/>
 		</connection>
 		<connection name="part0_phy_sfp" component1="part0" component2="SFP">
 			<connection_map name="part0_phy_sfp_1" typical_delay="5" c1_st_index="99" c1_end_index="102" c2_st_index="0" c2_end_index="3"/>

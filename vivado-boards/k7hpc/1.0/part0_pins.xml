@@ -31,14 +31,23 @@
 		<pin index="26" name ="IIC_SCL_MAIN" iostandard="LVCMOS25" loc="K21" drive="8" slew="SLOW"/>
 		<pin index="27" name ="IIC_SDA_MAIN" iostandard="LVCMOS25" loc="L21" drive="8" slew="SLOW"/>
 
-		<pin index="28" name ="GPIO_LED_0_LS" iostandard="LVCMOS15" loc="AA2"/>
-		<pin index="29" name ="GPIO_LED_1_LS" iostandard="LVCMOS15" loc="AD5"/>
-		<pin index="30" name ="GPIO_LED_2_LS" iostandard="LVCMOS15" loc="W10"/>
-		<pin index="31" name ="GPIO_LED_3_LS" iostandard="LVCMOS15" loc="Y10"/>
-		<pin index="32" name ="GPIO_LED_4_LS" iostandard="LVCMOS15" loc="AE10"/>
-		<pin index="33" name ="GPIO_LED_5_LS" iostandard="LVCMOS15" loc="W11"/>
-		<pin index="34" name ="GPIO_LED_6_LS" iostandard="LVCMOS15" loc="V11"/>
-		<pin index="35" name ="GPIO_LED_7_LS" iostandard="LVCMOS15" loc="Y12"/>
+		<pin index="28" name ="GPIO_LED_0_LS" iostandard="LVCMOS15" loc="AB8"/>
+		<pin index="29" name ="GPIO_LED_1_LS" iostandard="LVCMOS15" loc="AA8"/>
+		<pin index="30" name ="GPIO_LED_2_LS" iostandard="LVCMOS15" loc="AC9"/>
+		<pin index="31" name ="GPIO_LED_3_LS" iostandard="LVCMOS15" loc="AB9"/>
+		<pin index="32" name ="GPIO_LED_4_LS" iostandard="LVCMOS25" loc="AE26"/>
+		<pin index="33" name ="GPIO_LED_5_LS" iostandard="LVCMOS25" loc="G19"/>
+		<pin index="34" name ="GPIO_LED_6_LS" iostandard="LVCMOS25" loc="E18"/>
+		<pin index="35" name ="GPIO_LED_7_LS" iostandard="LVCMOS25" loc="F16"/>
+
+		<pin index="36" name ="LCD_E_LS" iostandard="LVCMOS15" loc="AB10"/>
+		<pin index="37" name ="LCD_RS_LS" iostandard="LVCMOS15" loc="Y11"/>
+		<pin index="38" name ="LCD_RW_LS" iostandard="LVCMOS15" loc="AB13"/>
+		<pin index="39" name ="LCD_DB7_LS" iostandard="LVCMOS15" loc="Y10"/>
+		<pin index="40" name ="LCD_DB6_LS" iostandard="LVCMOS15" loc="AA11"/>
+		<pin index="41" name ="LCD_DB5_LS" iostandard="LVCMOS15" loc="AA10"/>
+		<pin index="42" name ="LCD_DB4_LS" iostandard="LVCMOS15" loc="AA13"/>
+
 
 		<pin index="43" name ="FLASH_A0" iostandard="LVCMOS25" loc="W22"/>
 		<pin index="44" name ="FLASH_A1" iostandard="LVCMOS25" loc="W21"/>
@@ -89,14 +98,17 @@
 		<pin index="87" name ="FLASH_OE_B" iostandard="LVCMOS25" loc="M24"/> 
 
 
-		<pin index="88" name ="GPIO_KEY_3" iostandard="LVCMOS25" loc="C24"/>		
-		<pin index="89" name ="GPIO_KEY_2" iostandard="LVCMOS15" loc="AC16"/>
+		<pin index="88" name ="GPIO_SW_C" iostandard="LVCMOS25" loc="G12"/>		
+		<pin index="89" name ="GPIO_SW_W" iostandard="LVCMOS15" loc="AC6"/>
+		<pin index="90" name ="GPIO_SW_S" iostandard="LVCMOS15" loc="AB12"/>
+		<pin index="91" name ="GPIO_SW_E" iostandard="LVCMOS15" loc="AG5"/>
+		<pin index="92" name ="GPIO_SW_N" iostandard="LVCMOS15" loc="AA12"/>
 
 		<pin index="93" name ="USB_CTS" iostandard="LVDS" loc="L27"/>
 		<!-- NOTE for pin index 94 & 95 iostandard is defined in component rs232_uart 
 		iostandard is optional attribute for fpga pins & it will be always overwritten by component(non fpga) level pin attributes -->
-		<pin index="94" name ="USB_TX" loc="M25"/>
-		<pin index="95" name ="USB_RX" loc="L25"/>
+		<pin index="94" name ="USB_TX" loc="K24"/>
+		<pin index="95" name ="USB_RX" loc="M19"/>
 		<pin index="96" name ="USB_RTS" iostandard="LVCMOS25" loc="K23"/>
 
 		<pin index="97" name ="SFP_TX_DISABLE" iostandard="LVDS" loc="Y20"/>
@@ -135,8 +147,8 @@
 		<pin index="127" name ="ROTARY_INCB" iostandard="LVCMOS25" loc="Y25"/>
 		<pin index="128" name ="SGMIICLK_Q0_P" iostandard="LVDS" loc="G8"/>
 		<pin index="129" name ="SGMIICLK_Q0_N" iostandard="LVDS" loc="G7"/>
-		<pin index="130" name ="SYSCLK_P" iostandard="DIFF_SSTL15" loc="AB11"/>
-		<pin index="131" name ="SYSCLK_N" iostandard="DIFF_SSTL15" loc="AC11" diff_term="true"/>
+		<pin index="130" name ="SYSCLK_P" iostandard="DIFF_SSTL15" loc="AD12"/>
+		<pin index="131" name ="SYSCLK_N" iostandard="DIFF_SSTL15" loc="AD11" diff_term="true"/>
 		<pin index="132" name ="CPU_RESET" iostandard="LVCMOS15" loc="AB7"/>
 		
 		<pin index="133" name="FMC_LPC_LA09_P" iostandard="LVCMOS25" loc="AK23"/>
