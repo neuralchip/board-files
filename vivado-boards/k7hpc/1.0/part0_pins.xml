@@ -31,14 +31,14 @@
 		<pin index="26" name ="IIC_SCL_MAIN" iostandard="LVCMOS25" loc="K21" drive="8" slew="SLOW"/>
 		<pin index="27" name ="IIC_SDA_MAIN" iostandard="LVCMOS25" loc="L21" drive="8" slew="SLOW"/>
 
-		<pin index="28" name ="GPIO_LED_0_LS" iostandard="LVCMOS15" loc="AB8"/>
-		<pin index="29" name ="GPIO_LED_1_LS" iostandard="LVCMOS15" loc="AA8"/>
-		<pin index="30" name ="GPIO_LED_2_LS" iostandard="LVCMOS15" loc="AC9"/>
-		<pin index="31" name ="GPIO_LED_3_LS" iostandard="LVCMOS15" loc="AB9"/>
-		<pin index="32" name ="GPIO_LED_4_LS" iostandard="LVCMOS25" loc="AE26"/>
-		<pin index="33" name ="GPIO_LED_5_LS" iostandard="LVCMOS25" loc="G19"/>
-		<pin index="34" name ="GPIO_LED_6_LS" iostandard="LVCMOS25" loc="E18"/>
-		<pin index="35" name ="GPIO_LED_7_LS" iostandard="LVCMOS25" loc="F16"/>
+		<pin index="28" name ="GPIO_LED_0_LS" iostandard="LVCMOS15" loc="Y12"/>
+		<pin index="29" name ="GPIO_LED_1_LS" iostandard="LVCMOS15" loc="V11"/>
+		<pin index="30" name ="GPIO_LED_2_LS" iostandard="LVCMOS15" loc="W11"/>
+		<pin index="31" name ="GPIO_LED_3_LS" iostandard="LVCMOS15" loc="AE10"/>
+		<pin index="32" name ="GPIO_LED_4_LS" iostandard="LVCMOS15" loc="Y10"/>
+		<pin index="33" name ="GPIO_LED_5_LS" iostandard="LVCMOS15" loc="W10"/>
+		<pin index="34" name ="GPIO_LED_6_LS" iostandard="LVCMOS15" loc="AD5"/>
+		<pin index="35" name ="GPIO_LED_7_LS" iostandard="LVCMOS15" loc="AA2"/>
 
 		<pin index="36" name ="LCD_E_LS" iostandard="LVCMOS15" loc="AB10"/>
 		<pin index="37" name ="LCD_RS_LS" iostandard="LVCMOS15" loc="Y11"/>

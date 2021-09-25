@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
-<board schema_version="2.1" vendor="neuralchip.tech" name="k7hpc" display_name="Kintex-7 HPC-PCIe Computing Platform" url="www.neuralchip.tech/k7hpc" preset_file="preset.xml">
+<board schema_version="2.1" vendor="neuralchip.tech" name="k7hpc-pcie" display_name="Kintex-7 HPC-PCIe Computing Platform" url="www.neuralchip.tech/k7hpc-pcie" preset_file="preset.xml">
 
 	<images>
-		<image name="k7hpc_board.png" display_name="k7hpc BOARD" sub_type="board">
+		<image name="k7hpc_board.png" display_name="K7HPC-PCIe BOARD" sub_type="board">
 			<description>k7hpc Board File Image</description>
 		</image>
 	</images>
@@ -281,7 +281,7 @@
 	</pins>
 	</component>
 
-	<component name="part0" display_name="Kintex-7 HPC-PCie Computing Platform" type="fpga" part_name="xc7k325tffg676-2" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="www.neuralchip.tech/k7hpc">
+	<component name="part0" display_name="Kintex-7 HPC-PCie Computing Platform" type="neuralchip" part_name="xc7k325tffg676-2" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="www.neuralchip.tech/k7hpc">
 			<description>FPGA part on the board</description>
 			<interfaces>
 				<interface mode="master" name="ddr3_sdram" type="xilinx.com:interface:ddrx_rtl:1.0" of_component="ddr3_sdram" preset_proc="ddr3_sdram_preset">
