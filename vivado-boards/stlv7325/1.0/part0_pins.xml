@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <part_info part_name="xc7k325tffg676-1">
+    <pins>
+      <pin index="0" name ="sys_diff_clock_p" iostandard="DIFF_SSTL15" loc="AB11"/>
+      <pin index="1" name ="sys_diff_clock_n" iostandard="DIFF_SSTL15" loc="AC11"/>
+      
+      <pin index="2" name ="uclk" iostandard="LVCMOS25" loc="F17"/>
+      
+      <pin index="3" name ="sys_rstn" iostandard="LVCMOS25" loc="C24"/>
+      
+      <pin index="4" name ="rs232_uart_rxd" iostandard="LVCMOS33" loc="L25"/>
+      <pin index="5" name ="rs232_uart_txd" iostandard="LVCMOS33" loc="M25"/>
+      <pin index="6" name ="rs232_uart_ctsn" iostandard="LVCMOS33" loc="L18"/> <!-- NC  -->
+      <pin index="7" name ="rs232_uart_rtsn" iostandard="LVCMOS33" loc="H24"/> <!-- NC  -->
+
+      <pin index="8" name ="led_8bits_tri_o_0" iostandard="LVCMOS15" loc="AA2"/>
+      <pin index="9" name ="led_8bits_tri_o_1" iostandard="LVCMOS15" loc="AD5"/>
+      <pin index="10" name ="led_8bits_tri_o_2" iostandard="LVCMOS15" loc="W10"/>
+      <pin index="11" name ="led_8bits_tri_o_3" iostandard="LVCMOS15" loc="Y10"/>
+      <pin index="12" name ="led_8bits_tri_o_4" iostandard="LVCMOS15" loc="AE10"/>
+      <pin index="13" name ="led_8bits_tri_o_5" iostandard="LVCMOS15" loc="W11"/>
+      <pin index="14" name ="led_8bits_tri_o_6" iostandard="LVCMOS15" loc="V11"/>
+      <pin index="15" name ="led_8bits_tri_o_7" iostandard="LVCMOS15" loc="Y12"/>
+
+      <pin index="16" name ="sata_a_txp" iostandard="LVCMOS33" loc="P2"/>
+      <pin index="17" name ="sata_a_txn" iostandard="LVCMOS33" loc="P1"/>
+      <pin index="18" name ="sata_a_rxp" iostandard="LVCMOS33" loc="R4"/>
+      <pin index="19" name ="sata_a_txn" iostandard="LVCMOS33" loc="R3"/>
+      
+      <pin index="20" name ="sata_b_txp" iostandard="LVCMOS33" loc="M2"/>
+      <pin index="21" name ="sata_b_txn" iostandard="LVCMOS33" loc="M1"/>
+      <pin index="22" name ="sata_b_rxp" iostandard="LVCMOS33" loc="N4"/>
+      <pin index="23" name ="sata_b_txn" iostandard="LVCMOS33" loc="N3"/>
+      
+      <pin index="24" name ="hdmi_clk_p" iostandard="TMDS_33" loc="N18"/>
+      <pin index="25" name ="hdmi_clk_n" iostandard="TMDS_33" loc="M19"/>
+      <pin index="26" name ="hdmi_d0_p" iostandard="TMDS_33" loc="M21"/>
+      <pin index="27" name ="hdmi_d0_n" iostandard="TMDS_33" loc="M22"/>
+      <pin index="28" name ="hdmi_d1_p" iostandard="TMDS_33" loc="K25"/>
+      <pin index="29" name ="hdmi_d1_n" iostandard="TMDS_33" loc="K26"/>
+      <pin index="30" name ="hdmi_d2_p" iostandard="TMDS_33" loc="R21"/>
+      <pin index="31" name ="hdmi_d2_n" iostandard="TMDS_33" loc="P21"/>
+      <pin index="32" name ="hdmi_cec" iostandard="LVCMOS33" loc="M26"/>
+      <pin index="33" name ="hdmi_hpd" iostandard="LVCMOS33" loc="N26"/>
+      <pin index="34" name ="hdmi_sck" iostandard="LVCMOS33" loc="K21"/>
+      <pin index="35" name ="hdmi_sda" iostandard="LVCMOS33" loc="L23"/>
+
+      <pin index="36" name ="gmii_a_mdio" iostandard="LVCMOS25" loc="K15"/>
+      <pin index="37" name ="gmii_a_mdc" iostandard="LVCMOS25" loc="M16"/>
+      <pin index="38" name ="gmii_a_gtx_clk" iostandard="LVCMOS25" loc="F13"/>
+      <pin index="39" name ="gmii_a_rst" iostandard="LVCMOS25" loc="D11"/>
+      <pin index="40" name ="gmii_a_rx_clk" iostandard="LVCMOS25" loc="C12" />
+      <pin index="41" name ="gmii_a_rx_dv_" iostandard="LVCMOS25" loc="G14" />
+      <pin index="42" name ="gmii_a_rx_er" iostandard="LVCMOS25" loc="F14" />
+      <pin index="43" name ="gmii_a_tx_clk" iostandard="LVCMOS25" loc="E12" />
+      <pin index="44" name ="gmii_a_tx_en_" iostandard="LVCMOS25" loc="E13" />
+      <pin index="45" name ="gmii_a_tx_er" iostandard="LVCMOS25" loc="F12" />
+      <pin index="46" name ="gmii_a_rxd_0" iostandard="LVCMOS25" loc="H14" />
+      <pin index="47" name ="gmii_a_rxd_1" iostandard="LVCMOS25" loc="J14" />
+      <pin index="48" name ="gmii_a_rxd_2" iostandard="LVCMOS25" loc="J13" />
+      <pin index="49" name ="gmii_a_rxd_3" iostandard="LVCMOS25" loc="H13" />
+      <pin index="50" name ="gmii_a_rxd_4" iostandard="LVCMOS25" loc="B15" />
+      <pin index="51" name ="gmii_a_rxd_5" iostandard="LVCMOS25" loc="A15" />
+      <pin index="52" name ="gmii_a_rxd_6" iostandard="LVCMOS25" loc="B14" />
+      <pin index="53" name ="gmii_a_rxd_7" iostandard="LVCMOS25" loc="A14" />
+      <pin index="54" name ="gmii_a_txd_0" iostandard="LVCMOS25" loc="G12" />
+      <pin index="55" name ="gmii_a_txd_1" iostandard="LVCMOS25" loc="E11" />
+      <pin index="56" name ="gmii_a_txd_2" iostandard="LVCMOS25" loc="G11" />
+      <pin index="57" name ="gmii_a_txd_3" iostandard="LVCMOS25" loc="C14" />
+      <pin index="58" name ="gmii_a_txd_4" iostandard="LVCMOS25" loc="D14" />
+      <pin index="59" name ="gmii_a_txd_5" iostandard="LVCMOS25" loc="C13" />
+      <pin index="60" name ="gmii_a_txd_6" iostandard="LVCMOS25" loc="C11" />
+      <pin index="61" name ="gmii_a_txd_7" iostandard="LVCMOS25" loc="D13" />
+
+      <pin index="62" name ="gmii_b_mdio" iostandard="LVCMOS25" loc="G9"/>
+      <pin index="63" name ="gmii_b_mdc" iostandard="LVCMOS25" loc="H8"/>
+      <pin index="64" name ="gmii_b_gtx_clk" iostandard="LVCMOS25" loc="D8"/>
+      <pin index="65" name ="gmii_b_rst" iostandard="LVCMOS25" loc="J8"/>
+      <pin index="66" name ="gmii_b_rx_clk" iostandard="LVCMOS25" loc="E10" />
+      <pin index="67" name ="gmii_b_rx_dv_" iostandard="LVCMOS25" loc="A12" />
+      <pin index="68" name ="gmii_b_rx_er" iostandard="LVCMOS25" loc="D10" />
+      <pin index="69" name ="gmii_b_tx_clk" iostandard="LVCMOS25" loc="C9" />
+      <pin index="70" name ="gmii_b_tx_en_" iostandard="LVCMOS25" loc="F8" />
+      <pin index="71" name ="gmii_b_tx_er" iostandard="LVCMOS25" loc="D9" />
+      <pin index="72" name ="gmii_b_rxd_0" iostandard="LVCMOS25" loc="A13" />
+      <pin index="73" name ="gmii_b_rxd_1" iostandard="LVCMOS25" loc="B12" />
+      <pin index="74" name ="gmii_b_rxd_2" iostandard="LVCMOS25" loc="B11" />
+      <pin index="75" name ="gmii_b_rxd_3" iostandard="LVCMOS25" loc="A10" />
+      <pin index="76" name ="gmii_b_rxd_4" iostandard="LVCMOS25" loc="B10" />
+      <pin index="77" name ="gmii_b_rxd_5" iostandard="LVCMOS25" loc="A9" />
+      <pin index="78" name ="gmii_b_rxd_6" iostandard="LVCMOS25" loc="B9" />
+      <pin index="79" name ="gmii_b_rxd_7" iostandard="LVCMOS25" loc="A8" />
+      <pin index="80" name ="gmii_b_txd_0" iostandard="LVCMOS25" loc="H11" />
+      <pin index="81" name ="gmii_b_txd_1" iostandard="LVCMOS25" loc="J11" />
+      <pin index="82" name ="gmii_b_txd_2" iostandard="LVCMOS25" loc="H9" />
+      <pin index="83" name ="gmii_b_txd_3" iostandard="LVCMOS25" loc="J10" />
+      <pin index="84" name ="gmii_b_txd_4" iostandard="LVCMOS25" loc="H12" />
+      <pin index="85" name ="gmii_b_txd_5" iostandard="LVCMOS25" loc="F10" />
+      <pin index="86" name ="gmii_b_txd_6" iostandard="LVCMOS25" loc="G10" />
+      <pin index="87" name ="gmii_b_txd_7" iostandard="LVCMOS25" loc="F9" />
+
+
+      <pin index="88" name ="pcie_ref_clk_n" loc="H5"/>
+      <pin index="89" name ="pcie_ref_clk_p" loc="H6"/>
+      <pin index="90" name ="pcie_rst" iostandard="LVCMOS33-" loc="E17"/>
+      <pin index="91" name ="pcie_rx0_p" loc="B6"/>
+      <pin index="92" name ="pcie_rx1_p" loc="C4"/>
+      <pin index="93" name ="pcie_rx2_p" loc="E4"/>
+      <pin index="94" name ="pcie_rx3_p" loc="G4"/>
+      <pin index="95" name ="pcie_rx0_n" loc="B5"/>
+      <pin index="96" name ="pcie_rx1_n" loc="C3"/>
+      <pin index="97" name ="pcie_rx2_n" loc="E3"/>
+      <pin index="98" name ="pcie_rx3_n" loc="G3"/>
+      <pin index="99" name ="pcie_tx0_p" loc="A4"/>
+      <pin index="100" name ="pcie_tx1_p" loc="B2"/>
+      <pin index="101" name ="pcie_tx2_p" loc="D2"/>
+      <pin index="102" name ="pcie_tx3_p" loc="F2"/>
+      <pin index="103" name ="pcie_tx0_n" loc="A3"/>
+      <pin index="104" name ="pcie_tx1_n" loc="B1"/>
+      <pin index="105" name ="pcie_tx2_n" loc="D1"/>
+      <pin index="106" name ="pcie_tx3_n" loc="F1"/>
+
+      <pin index="107" name ="sdio_clk" iostandard="LVCMOS33" loc="N21"/>
+      <pin index="108" name ="sdio_cmd" iostandard="LVCMOS33" loc="U21"/>
+      <pin index="109" name ="sdio_d0" iostandard="LVCMOS33" loc="N16"/>
+      <pin index="110" name ="sdio_d1" iostandard="LVCMOS33" loc="U16"/>
+      <pin index="111" name ="sdio_d2" iostandard="LVCMOS33" loc="N22"/>
+      <pin index="112" name ="sdio_d3" iostandard="LVCMOS33" loc="P19"/>
+      <pin index="113" name ="sdio_wp" iostandard="LVCMOS33" loc="F24"/> <!-- NC  --> 
+      <pin index="114" name ="sdio_cd" iostandard="LVCMOS33" loc="F20"/> <!-- NC  -->
+
+      <pin index="115" name ="sfp_a_tx_p" iostandard="LVDS" loc="H2"/>
+      <pin index="116" name ="sfp_a_tx_n" iostandard="LVDS" loc="H1"/>
+      <pin index="117" name ="sfp_a_rx_p" iostandard="LVDS" loc="J4"/>
+      <pin index="118" name ="sfp_a_rx_n" iostandard="LVDS" loc="J3"/>
+      <pin index="119" name ="sfp_a_sda" iostandard="LVDS" loc="B21"/>
+      <pin index="120" name ="sfp_a_scl" iostandard="LVDS" loc="C21"/>
+
+      <pin index="121" name ="sfp_b_tx_p" iostandard="LVDS" loc="K2"/>
+      <pin index="122" name ="sfp_b_tx_n" iostandard="LVDS" loc="K1"/>
+      <pin index="123" name ="sfp_b_rx_p" iostandard="LVDS" loc="L4"/>
+      <pin index="124" name ="sfp_b_rx_n" iostandard="LVDS" loc="L3"/>
+      <pin index="125" name ="sfp_b_sda" iostandard="LVDS" loc="D21"/>
+      <pin index="126" name ="sfp_b_scl" iostandard="LVDS" loc="C22"/>
+      <pin index="127" name ="push_button" iostandard="LVCMOS15" loc="AC16"/>
+  </pins>
+</part_info>

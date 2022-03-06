@@ -1,0 +1,33 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "STLV7325", 
+          "display": "Kintex-7 STLV7325 HPC Platform", 
+          "revision": "1.0", 
+          "description": "Kintex-7 STLV7325 HPC Platform", 
+          "company": "neuralchip.tech", 
+          "company_display": "NeuralChip", 
+          "author": "Vanitha", 
+          "contributors": [
+            {
+              "group": "NeuralChip" ,
+              "url": "www.neuralchip.tech"
+            }
+          ], 
+          "category": "Single Part", 
+          "website": "http://www.neuralchip.tech/K7HPC", 
+          "search-keywords": [
+            "STLV7325", 
+            "neuralchip",
+            "board", 
+            "Single Part"
+          ]
+        }
+      }
+    ]
+  },
+  "_major": 1,
+  "_minor": 0
+}
