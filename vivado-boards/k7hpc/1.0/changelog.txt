@@ -1,3 +1,0 @@
-######### K7HPC-PCIe Change log ##############
-1.0
-Initial Release 
