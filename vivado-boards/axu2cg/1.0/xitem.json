@@ -1,0 +1,35 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "axu2cg", 
+          "display": "Alinx AXU2CG FPGA Development Board", 
+          "revision": "1.0", 
+          "description": "Alinx AXU2CG FPGA Development Board", 
+          "company": "alinx.com", 
+          "company_display": "alinx", 
+          "author": "alimpk", 
+          "contributors": [
+            {
+              "group": "Alinx", 
+              "url": "www.alinx.com"
+            }
+          ], 
+          "category": "FPGA Development Board",
+          "logo": "axu2cg.jpg",
+          "website": "FPGA Development Board", 
+          "search-keywords": [
+            "SOM", 
+            "xilinx.com", 
+            "board",
+            "neuralchip.tech",
+            "FPGA Development Board"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}
